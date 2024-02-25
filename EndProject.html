@@ -1,0 +1,143 @@
+
+<html>
+<head>
+    <title>ProjectGAC.edu</title>
+    <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.FartAeOCWvkOobNV871NNQHaHZ?rs=1&pid=ImgDetMain"> 
+    <style>
+        .head1 {
+            text-align:center;
+            background-color:#A7D7FF;
+            color:Black;
+        }
+
+        .img{
+            width:100%;
+        margin-left: 20%;
+        }
+
+        body{
+            background:url("https://i.pinimg.com/564x/ad/85/3b/ad853bb64d7309c2e91fd63fd0e31980.jpg" );
+            background-repeat: no-repeat;
+            background-size:120%;
+         }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+        .Slogan1{
+            text-align: center;
+            margin-top: 0%;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="head1">Glorious Academy Chitwan<br>Bharatpur-4,lanku </h2>
+    <div class="img">
+        <img height="90"  src="https://play-lh.googleusercontent.com/Tfz8__HEHLp9NuEXZp6T9c9HIgGpSg8MpNbMZqX8BVVfF35rQPyznTP55fm3Ff7ShpM">
+    <div class="Slogan1"><h3>-Quality Education Is Our Motto</h3></div>
+    </div>
+    <hr>
+    <h3>Our Administrators:</h3>
+    <ol>
+        <li><b>Principal:Sharda Dhakal</b></li>
+        <li><b>Founder: Toran Dhakal</b></li>
+        <li><b>+2 Co-ordinator:Sujal Maskey</b></li>
+    </ol>
+    <hr>
+    <h2 style="text-align:center; background-color:skyblue">Enter the form for registration</h2>
+    <form id="registrationForm">
+        <div id="edit">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" placeholder="Enter your first name" required/>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" placeholder="Enter your Last name"required/>
+            <label for="age">Date of birth:</label>
+            <input type="date" id="age"/>
+        </div><br>
+        <div>
+            <label for="province"><b>select your province:</b></label>
+            <select name="province" id="prov1">
+                <option value="0">Enter your province</option>
+                <option value="1">koshi</option>
+                <option value="2">Madesh</option>
+                <option value="3">Bagmati</option>
+                <option value="4">Gandaki</option>
+                <option value="5">Lumbini</option>
+                <option value="6">Karnali</option>
+                <option value="7">sudurpaschim</option>                
+            </select>
+            
+            <label for="Address">District:</label>
+            <input type="text" id="Address" placeholder="Enter your District" required/>
+            <label for="City">City:</label>
+            <input type="text" id="City" placeholder="Enter your City" required/>
+        </div><br>
+        <div>
+            <label for="contact_no">Contact number:</label>
+            <input type="number" id="contact_no" placeholder="Enter your number" required/>
+            <label for="email">Enter email:</label>
+            <input type="email" id="email" placeholder="Enter your email Address" required/>
+            
+        </div><br>
+        <div>
+            <label for="Previous_School">Previous School:</label>
+            <input type="text" id="Previous_School" placeholder="Enter your previous school" required/>
+            <label for="GPA">Enter your GPA:</label>
+            <input type="number" id="GPA" placeholder="Enter your GPA" required/>
+            
+        </div><br>
+        <div>
+            <label for="course">Select Course:</label>
+            <select name="course" id="course">
+                <option value="0">select course</option>
+                <option value="1">MBBS</option>
+                <option value="2">BSCIT</option>
+                <option value="3">BTECH</option>
+                <option value="4">BSC</option>
+                <option value="5">BBS</option>             
+            </select>
+        </div><br><br>
+        <div>
+            <input type="button" value="Send" onclick="addData()">
+            <input type="reset" value="Clear All">
+        </div>
+    </form>
+
+    <table id="tbl_data">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>District</th>
+            <th>City</th>
+            <th>Contact Number</th>
+            <th>Email</th>
+            <th>Previous School</th>
+            <th>GPA</th>
+        </tr>
+    </table>
+
+    <script>
+        function addData() {
+            var form = document.getElementById("registrationForm");
+            var table = document.getElementById("tbl_data");
+            var newRow = table.insertRow();
+
+            var cells = [];
+            for (var i = 0; i < 9; i++) {
+                cells[i] = newRow.insertCell(i);
+            }
+
+            cells[0].innerHTML = form.elements["fname"].value;
+            cells[1].innerHTML = form.elements["lname"].value;
+            cells[2].innerHTML = form.elements["age"].value;
+            cells[3].innerHTML = form.elements["Address"].value;
+            cells[4].innerHTML = form.elements["City"].value;
+            cells[5].innerHTML = form.elements["contact_no"].value;
+            cells[6].innerHTML = form.elements["email"].value;
+            cells[7].innerHTML = form.elements["Previous_School"].value;
+            cells[8].innerHTML = form.elements["GPA"].value;
+        }
+    </script>
+    </body>
+    </html>
