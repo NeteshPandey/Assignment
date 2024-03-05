@@ -1,13 +1,17 @@
 
+
+
+
 <html>
 <head>
     <title>ProjectGAC.edu</title>
-    <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.FartAeOCWvkOobNV871NNQHaHZ?rs=1&pid=ImgDetMain"> 
+    <link rel="icon" type="image/x-icon" href="https://play-lh.googleusercontent.com/Tfz8__HEHLp9NuEXZp6T9c9HIgGpSg8MpNbMZqX8BVVfF35rQPyznTP55fm3Ff7ShpM"> 
     <style>
         .head1 {
             text-align:center;
             background-color:#A7D7FF;
             color:Black;
+            font-family:Georgia, 'Times New Roman', Times, serif;
         }
 
         .img{
@@ -15,10 +19,14 @@
         margin-left: 20%;
         }
 
-        body{
-            background:url("https://i.pinimg.com/564x/ad/85/3b/ad853bb64d7309c2e91fd63fd0e31980.jpg" );
-            background-repeat: no-repeat;
-            background-size:120%;
+            body {
+    background-image: url("https://demishia.com/wp-content/uploads/2018/04/admin-login-background-images-8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+
+
+          
          }
 
         table, th, td {
@@ -28,6 +36,43 @@
             text-align: center;
             margin-top: 0%;
         }
+        #head_2{
+            text-align: center;
+            font-size: 27px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+        }
+       footer{
+        background-color:skyblue;
+       }
+       .footer_head{
+        padding-left: 15%;
+        font-family:'Courier New', Courier, monospace;
+       }
+       .footer_para{
+        padding-left: 15%;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 11;
+        color:red;
+       }
+       .email_receiver {
+        width: 40%; 
+    padding-left: 32%;
+    font-size: 30px;
+    outline: none;
+}
+    
+       .button{
+        border-radius: 20%;
+       }
+       #email_taker{
+    object-position: center;
+    font-size: 17px;
+    outline: none;
+        
+       }
+       #centered{
+        text-align: center;
+       }
     </style>
 </head>
 <body>
@@ -37,7 +82,7 @@
     <div class="Slogan1"><h3>-Quality Education Is Our Motto</h3></div>
     </div>
     <hr>
-    <h3>Our Administrators:</h3>
+    <h3 style="font-size: 20px;"><b>Our Administrators:</b></h3>
     <ol>
         <li><b>Principal:Sharda Dhakal</b></li>
         <li><b>Founder: Toran Dhakal</b></li>
@@ -48,14 +93,14 @@
     <form id="registrationForm">
         <div id="edit">
             <label for="fname">First Name:</label>
-            <input type="text" id="fname" placeholder="Enter your first name" required/>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name" required/>
             <label for="lname">Last Name:</label>
-            <input type="text" id="lname" placeholder="Enter your Last name"required/>
+            <input type="text" id="lname" name="lname" placeholder="Enter your Last name"required/>
             <label for="age">Date of birth:</label>
-            <input type="date" id="age"/>
+            <input type="date" name="DOB" id="age"/>
         </div><br>
         <div>
-            <label for="province"><b>select your province:</b></label>
+            <label for="province">Select your province:</label>
             <select name="province" id="prov1">
                 <option value="0">Enter your province</option>
                 <option value="1">koshi</option>
@@ -68,22 +113,22 @@
             </select>
             
             <label for="Address">District:</label>
-            <input type="text" id="Address" placeholder="Enter your District" required/>
+            <input type="text" id="Address" name="District"     placeholder="Enter your District" required/>
             <label for="City">City:</label>
-            <input type="text" id="City" placeholder="Enter your City" required/>
+            <input type="text" id="City" name="City"  placeholder="Enter your City" required/>
         </div><br>
         <div>
             <label for="contact_no">Contact number:</label>
-            <input type="number" id="contact_no" placeholder="Enter your number" required/>
+            <input type="number" id="contact_no"name="contact_no"placeholder="Enter your number" required/>
             <label for="email">Enter email:</label>
-            <input type="email" id="email" placeholder="Enter your email Address" required/>
+            <input type="email" id="email" name="email" placeholder="Enter your email Address" required/>
             
         </div><br>
         <div>
             <label for="Previous_School">Previous School:</label>
-            <input type="text" id="Previous_School" placeholder="Enter your previous school" required/>
+            <input type="text" id="Previous_School" name="Previous_School" placeholder="Enter your previous school" required/>
             <label for="GPA">Enter your GPA:</label>
-            <input type="number" id="GPA" placeholder="Enter your GPA" required/>
+            <input type="number" id="GPA" name="GPA" placeholder="Enter your GPA" required/>
             
         </div><br>
         <div>
@@ -97,14 +142,18 @@
                 <option value="5">BBS</option>             
             </select>
         </div><br><br>
-        <div>
-            <input type="button" value="Send" onclick="addData()">
-            <input type="reset" value="Clear All">
+        <div >
+            <input type="button" class="button"value="Send"  onclick="addData()">
+            <input type="reset"class="button"  value="Clear All">
         </div>
     </form>
-
+    <h3 id="head_2">IF not free to visit have a glance</h3>
+<center><iframe  height="450" width="400"src="https://youtube.com/embed/HzoQM058Jgw">
+   
+</iframe></center><br>
+        <br>
     <table id="tbl_data">
-        <tr>
+     <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Date of Birth</th>
@@ -138,6 +187,19 @@
             cells[7].innerHTML = form.elements["Previous_School"].value;
             cells[8].innerHTML = form.elements["GPA"].value;
         }
+         function notify(){
+            alert("thank you for subscription");
+         }
     </script>
-    </body>
+    
+    </body><footer>
+        <hr> 
+   
+   <div id="centered" ><h2 class="email_receiver" >Subscribe To Get Continious Updates</h2>
+    <input type="text" id="email_taker" placeholder="fill Your Email here">
+<input type="submit" class="button" onclick="notify()"></div> 
+<h2 class="footer_head">Glorious Academy Chitwan™</h2>
+<p class="footer_para" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    Copyright © 2024 Glorious Academy. All rights reserved.</p>
+    </footer>
     </html>
